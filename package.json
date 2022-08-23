@@ -1,0 +1,33 @@
+{
+  "name": "mist-ui-monorepo",
+  "version": "1.0.0",
+  "packageManager": "pnpm@7.9.3",
+  "description": "this is mist ui monorepo",
+  "keywords": [],
+  "license": "MIT",
+  "author": "aibayanyu",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@mistjs/eslint-config-vue": "^0.0.2",
+    "@mistjs/tsconfig": "^1.0.0",
+    "@mistjs/tsconfig-vue": "^0.0.3",
+    "eslint": "^8.22.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.16",
+    "postcss-less": "^6.0.0",
+    "stylelint": "^14.11.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.{less,css}": "stylelint '{site,packages,playground}/**/*.less' --fix",
+    "*.{ts,tsx,js,vue}": "eslint . --fix"
+  }
+}

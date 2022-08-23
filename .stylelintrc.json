@@ -1,0 +1,17 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-rational-order"
+    ],
+    "plugins": ["stylelint-order"],
+    "customSyntax": "postcss-less",
+    "rules": {
+        "at-rule-no-unknown": null,
+        "no-duplicate-selectors": null,
+        "no-descending-specificity": null
+    },
+    "ignoreFiles": [
+        "node_modules/**",
+        "dist/**"
+    ]
+}
