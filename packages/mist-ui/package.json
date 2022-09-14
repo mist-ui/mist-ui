@@ -8,8 +8,8 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
-  "unpkg": "dist/mist-design.umd.js",
-  "jsdelivr": "dist/mist-design.umd.js",
+  "unpkg": "dist/mist-ui.umd.js",
+  "jsdelivr": "dist/mist-ui.umd.js",
   "exports": {
     ".": {
       "require": "./lib/index.js",

@@ -11,4 +11,10 @@ export default [
     component: () => import('../pages/components/space/index.vue'),
     meta: { title: 'Space 间距', enTitle: 'Space' },
   },
+  {
+    path: '/components/modal',
+    name: 'modal',
+    component: () => import('../pages/components/modal/index.vue'),
+    meta: { title: 'Modal 对话框', enTitle: 'Modal' },
+  },
 ]

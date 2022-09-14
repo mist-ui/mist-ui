@@ -56,6 +56,7 @@ export const resolveMistUI = (): PluginOption => {
   const tsMap = new Map<string, string>()
   return {
     name: 'mist-ui:resolver',
+    apply: 'serve',
     configResolved(_config) {
       config = _config
       watchMistUI(config, tsMap)

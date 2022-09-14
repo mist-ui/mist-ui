@@ -20,7 +20,10 @@
       "types": "./es/index.d.ts"
     },
     "./es": "./es/index.js",
-    "./lib": "./lib/index.js"
+    "./es/*.js": "./es/*.js",
+    "./lib": "./lib/index.js",
+    "./lib/*.js": "./lib/*.js",
+    "./*": "./*"
   },
   "files": [
     "dist",
