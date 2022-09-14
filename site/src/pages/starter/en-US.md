@@ -5,11 +5,11 @@
 
 ```shell
 
-npm install mist-design
+npm install mist-ui
 
 # OR
 
-pnpm add mist-design
+pnpm add mist-ui
 
 ```
 
@@ -18,11 +18,11 @@ pnpm add mist-design
 
 ### Global Register
 
-In `main.[tj]s` register:
+In `main.[t|j]s` register:
 
 ```ts
 import { createApp } from 'vue'
-import mistUI from 'mist-design'
+import mistUI from 'mist-ui'
 import App from './App.vue'
 import 'mist-design/dist/mist-ui.css'
 
@@ -39,7 +39,7 @@ We can register components globally:
 
 ```ts
 import { createApp } from 'vue'
-import { Button } from 'mist-design'
+import { Button } from 'mist-ui'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -60,8 +60,8 @@ We can register components in components:
 </template>
 
 <script lang="ts" setup>
-import { Button } from 'mist-design'
-import 'mist-design/es/button/style/css'
+import { Button } from 'mist-ui'
+import 'mist-ui/es/button/style/css'
 </script>
 ```
 
