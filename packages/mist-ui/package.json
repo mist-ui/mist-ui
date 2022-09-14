@@ -2,6 +2,19 @@
   "name": "mist-ui",
   "version": "0.0.0",
   "description": "A Vue3 Component Library",
+  "keywords": [
+    "mist-ui",
+    "ui",
+    "component library",
+    "vue",
+    "vue3"
+  ],
+  "license": "MIT",
+  "author": "aibayanyu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mist-ui/mist-ui"
+  },
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -39,19 +52,6 @@
     "@vueuse/core": "^8.9.4",
     "classnames": "^2.3.2",
     "vue": "^3.2.39"
-  },
-  "keywords": [
-    "mist-ui",
-    "ui",
-    "component library",
-    "vue",
-    "vue3"
-  ],
-  "license": "MIT",
-  "author": "aibayanyu",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mist-ui/mist-ui"
   },
   "devDependencies": {
     "@types/node": "^18.7.17",
