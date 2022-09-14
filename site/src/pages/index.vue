@@ -32,8 +32,7 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 const onJumpGit = () => {
-  // eslint-disable-next-line no-console
-  console.log('git')
+  window.open('https://github.com/mist-ui/mist-ui')
 }
 const onStart = () => {
   router.push('/starter')

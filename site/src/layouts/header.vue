@@ -51,7 +51,7 @@ const onChangeDark = () => {
   toggleDark()
 }
 const jumpGithub = () => {
-  window.open('https://github.com/mistjs/mist-design')
+  window.open('https://github.com/mist-ui/mist-ui')
 }
 
 const toggleLang = (lang: string) => {
