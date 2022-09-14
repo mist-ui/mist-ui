@@ -5,11 +5,11 @@
 
 ```shell
 
-npm install mist-design
+npm install mist-ui
 
 # OR
 
-pnpm add mist-design
+pnpm add mist-ui
 
 ```
 
@@ -23,9 +23,9 @@ pnpm add mist-design
 
 ```ts
 import { createApp } from 'vue'
-import mistUI from 'mist-design'
+import mistUI from 'mist-ui'
 import App from './App.vue'
-import 'mist-design/dist/mist-ui.css'
+import 'mist-ui/dist/mist-ui.css'
 
 const app = createApp(App)
 app.use(mistUI)
@@ -39,7 +39,7 @@ app.mount('#app')
 
 ```ts
 import { createApp } from 'vue'
-import { Button } from 'mist-design'
+import { Button } from 'mist-ui'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -60,7 +60,7 @@ app.mount('#app')
 </template>
 
 <script lang="ts" setup>
-import { Button } from 'mist-design'
-import 'mist-design/es/button/style/css'
+import { Button } from 'mist-ui'
+import 'mist-ui/es/button/style/css'
 </script>
 ```
