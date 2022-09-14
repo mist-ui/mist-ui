@@ -61,3 +61,7 @@ mist-cli
 # 输入站点名称 例如: tag 标签
 # 选择tsx，不要选择vue
 ```
+
+### Pull Request
+
+请参考文章：[github fork仓库发起Pull Request合入全流程](https://juejin.cn/post/6932300709987614728)

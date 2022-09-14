@@ -69,3 +69,11 @@ mist-cli
 # Select tsx, not vue
 
 ```
+
+### Pull Request
+
+* Please make sure that the code you submit has passed the test.
+* Please submit the PR to the `main` branch.
+* Please write a clear and concise PR title and description.
+* Please add the corresponding issue number in the PR description, such as `fix #1`, `close #1`, `resolve #1`.
+* Please add the corresponding test case for the code you submit.
