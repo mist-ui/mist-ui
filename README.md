@@ -5,6 +5,7 @@
 <p align="center">A Vue3 Component Library</p>
 <p align="center">Theme Customizable, TypeScript, Dark Mode</p>
 <p align="center">English | <a href="./README.zh-CN.md">中文</a></p>
+
 ## Documentation
 
 [www.mist-ui.cn](https://www.mist-ui.cn)
