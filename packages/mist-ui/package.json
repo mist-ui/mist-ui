@@ -1,7 +1,7 @@
 {
   "name": "mist-ui",
   "version": "0.0.0",
-  "description": "",
+  "description": "A Vue3 Component Library",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",

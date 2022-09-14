@@ -2,7 +2,7 @@
   "name": "mist-ui-monorepo",
   "version": "1.0.0",
   "packageManager": "pnpm@7.11.0",
-  "description": "this is mist ui monorepo",
+  "description": "A Vue3 Component Library",
   "keywords": [
     "mist-ui",
     "ui",
