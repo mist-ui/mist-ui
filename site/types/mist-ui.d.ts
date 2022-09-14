@@ -8,5 +8,6 @@ declare module '@vue/runtime-core' {
     MModal: typeof import('./../../packages/mist-ui/src/modal/modal.tsx')['default']
     MConfigProvider: typeof import('./../../packages/mist-ui/src/config-provider/config-provider.tsx')['default']
     MButton: typeof import('./../../packages/mist-ui/src/button/button.tsx')['default']
+    MOverlay: typeof import('./../../packages/mist-ui/src/overlay/overlay.tsx')['default']
   }
 }

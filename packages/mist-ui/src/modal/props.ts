@@ -13,6 +13,10 @@ export const modalProps = {
     type: Function as PropType<() => void>,
     default: undefined,
   },
+  'getContainer': {
+    type: Function as PropType<() => HTMLElement>,
+    default: undefined,
+  },
 }
 
 export type ModalProps = ExtractPropTypes<typeof modalProps>

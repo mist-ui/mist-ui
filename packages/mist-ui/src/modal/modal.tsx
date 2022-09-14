@@ -1,19 +1,16 @@
-import { defineComponent } from 'vue'
+import { Teleport, defineComponent } from 'vue'
 import { modalProps } from './props'
 export default defineComponent({
   name: 'MModal',
-  // inheritAttrs: false,
   props: {
     ...modalProps,
   },
   setup(props) {
     return () => {
+      const container = props?.getContainer?.() || 'body'
       return (
-        <>
-          <div>
-            {`${props.visible}`}
-          </div>
-        </>
+        <Teleport to={container}>
+        </Teleport>
       )
     }
   },
