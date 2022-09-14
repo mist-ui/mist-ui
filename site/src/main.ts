@@ -1,6 +1,7 @@
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import './styles/index.less'
+import 'mist-ui/style/index.less'
 import 'mist-ui/style'
 import { createApp } from 'vue'
 import mist from 'mist-ui'
