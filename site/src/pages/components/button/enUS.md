@@ -1,12 +1,7 @@
 # Button
 
-This is a button component.
+Button is used to start an immediate operation.
 
-:::warning Test
-
-Test
-
-:::
 
 ## Examples
 
@@ -26,3 +21,9 @@ Test
 
 <demo-box src="/button/demos/circle.vue" />
 </div>
+
+
+## Props
+
+
+## Events

@@ -1,5 +1,5 @@
 import type { App, Plugin } from 'vue'
-import Space from './space.vue'
+import Space from './space'
 
 Space.install = (app: App) => {
   app.component(Space.name ?? 'MSpace', Space)

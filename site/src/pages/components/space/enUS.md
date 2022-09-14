@@ -1,6 +1,6 @@
 # Space
 
-Description
+Setting the spacing between components.
 
 ## Examples
 

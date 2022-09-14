@@ -1,2 +1,33 @@
 @import "../../style/theme/index.less";
 @import "./theme.less";
+.@{space-cls} {
+  display: inline-flex;
+
+  &-align-center {
+    align-items: center;
+  }
+
+  &-align-end {
+    align-items: flex-end;
+  }
+
+  &-align-start {
+    align-items: flex-start;
+  }
+
+  &-align-baseline {
+    align-items: baseline;
+  }
+
+  &-horizontal {
+    flex-direction: row;
+  }
+
+  &-vertical {
+    flex-direction: column;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}

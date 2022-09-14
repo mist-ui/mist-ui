@@ -1,12 +1,6 @@
 # Button 按钮
 
-这是一个按钮组件
-
-:::warning 测试
-
-测试
-
-:::
+按钮用于开始一个即时操作。
 
 
 ## 例子
@@ -27,3 +21,9 @@
 
 <demo-box src="/button/demos/circle.vue" />
 </div>
+
+
+## 属性
+
+
+## 事件
