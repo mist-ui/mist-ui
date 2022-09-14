@@ -25,7 +25,7 @@
     "play:build": "pnpm -F play build",
     "test:u": "vitest -u",
     "test": "vitest run",
-    "build:ui": "mist-cli build ui -d",
+    "build:ui": "mist-cli build ui",
     "build:cli": "pnpm -F cli build",
     "build:icons": "mist-cli build icons",
     "lint": "run-p lint:*",
