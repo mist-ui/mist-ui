@@ -15,7 +15,6 @@
     "play:build": "pnpm -F play build",
     "test:u": "vitest -u",
     "test": "vitest run",
-    "generate:types": "esno scripts/generateTypes.ts",
     "build:ui": "mist-cli build ui -d",
     "build:cli": "pnpm -F cli build",
     "build:icons": "mist-cli build icons",

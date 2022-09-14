@@ -64,7 +64,6 @@ importers:
     specifiers:
       '@mist-design/icons': ^0.0.2
       '@mistjs/lodash': ^0.0.2
-      '@mistjs/tsconfig-vue': ^0.0.3
       '@types/node': ^18.7.17
       '@vue/shared': ^3.2.39
       '@vueuse/core': ^8.9.4
@@ -81,7 +80,6 @@ importers:
       classnames: 2.3.2
       vue: 3.2.39
     devDependencies:
-      '@mistjs/tsconfig-vue': 0.0.3
       '@types/node': 18.7.18
       '@vue/shared': 3.2.39
       typescript: 4.8.3
@@ -94,12 +92,15 @@ importers:
       '@iconify/json': ^2.1.100
       '@mist-design/plugin-docs': ^0.0.6
       '@mist-design/plugin-md': ^0.0.4
+      '@types/fs-extra': ^9.0.13
       '@types/node': ^18.7.14
       '@unocss/reset': ^0.45.21
       '@vitejs/plugin-vue': ^3.0.3
       '@vitejs/plugin-vue-jsx': ^2.0.1
       '@vue/runtime-core': ^3.2.38
       '@vueuse/core': ^9.2.0
+      chokidar: ^3.5.3
+      fs-extra: ^10.1.0
       less: ^4.1.3
       typescript: ^4.8.2
       unocss: ^0.45.13
@@ -121,10 +122,13 @@ importers:
       '@iconify/json': 2.1.106
       '@mist-design/plugin-docs': 0.0.6
       '@mist-design/plugin-md': 0.0.4_less@4.1.3
+      '@types/fs-extra': 9.0.13
       '@types/node': 18.7.18
       '@vitejs/plugin-vue': 3.1.0_vite@3.1.0+vue@3.2.39
       '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.0+vue@3.2.39
       '@vue/runtime-core': 3.2.39
+      chokidar: 3.5.3
+      fs-extra: 10.1.0
       less: 4.1.3
       typescript: 4.8.3
       unocss: 0.45.21_vite@3.1.0

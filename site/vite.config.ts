@@ -10,7 +10,9 @@ import { presetAttributify, presetIcons, presetTypography, presetUno } from 'uno
 import DefineOptions from 'unplugin-vue-define-options/vite'
 import { MistDesignVitePluginDocs } from '@mist-design/plugin-docs'
 import { mdToVue } from '@mist-design/plugin-md'
+import { resolveMistUI } from './plugins/resolver-mist-ui'
 const mistPath = fileURLToPath(new URL('../packages/mist-ui/src', import.meta.url))
+
 export default defineConfig({
   resolve: {
     alias: {
@@ -60,7 +62,7 @@ export default defineConfig({
       dts: 'types/auto-import.d.ts',
     }),
     Components({
-      extensions: ['vue'],
+      extensions: ['vue', 'tsx'],
       dirs: [
         'src/components',
         'src/layouts',
@@ -68,6 +70,13 @@ export default defineConfig({
       include: [
         /\.vue$/,
         /\.vue?vue/,
+      ],
+
+      exclude: [
+        /[\\/]node_modules[\\/]/,
+        /[\\/]\.git[\\/]/,
+        /[\\/]\.nuxt[\\/]/,
+        /[\\/]demos[\\/]/,
       ],
       dts: 'types/components.d.ts',
     }),
@@ -78,5 +87,6 @@ export default defineConfig({
     }),
     vueJsx(),
     Inspect(),
+    resolveMistUI(),
   ],
 })
