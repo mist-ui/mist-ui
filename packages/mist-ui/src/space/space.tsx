@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'vue'
 import { computed, defineComponent } from 'vue'
-import classNames from 'classnames'
+import { classMerge } from '../_utils/tools/class-merge'
 import { useInjectConfigGlobal } from '../config-provider'
 import { spaceProps } from './props'
 
@@ -11,7 +11,7 @@ export default defineComponent({
     const { getPrefixCls } = useInjectConfigGlobal()
     const spacePrefix = getPrefixCls('space')
 
-    const classs = computed(() => classNames(spacePrefix,
+    const classs = computed(() => classMerge(spacePrefix,
       {
         [`${spacePrefix}-${props.direction}`]: !!props.direction,
         [`${spacePrefix}-wrap`]: props.wrap,

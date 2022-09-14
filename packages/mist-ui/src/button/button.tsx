@@ -1,7 +1,7 @@
 import { LoadingOutlined } from '@mist-ui/icons'
-import classNames from 'classnames'
 import { computed, defineComponent } from 'vue'
 import { useInjectConfigGlobal } from '../config-provider'
+import { classMerge } from '../_utils/tools/class-merge'
 import { buttonProps } from './props'
 
 export default defineComponent({
@@ -10,7 +10,7 @@ export default defineComponent({
   setup(props, { slots }) {
     const { getPrefixCls } = useInjectConfigGlobal()
     const btnPrefix = getPrefixCls('btn')
-    const classs = computed(() => classNames(
+    const classs = computed(() => classMerge(
       btnPrefix,
       {
         [`${btnPrefix}-${props.type}`]: props.type !== 'default',
@@ -23,7 +23,7 @@ export default defineComponent({
         [`${btnPrefix}-loading`]: props.loading,
       },
     ))
-    const loadingClasss = computed(() => classNames(
+    const loadingClasss = computed(() => classMerge(
       {
         [`${btnPrefix}-loading-icon`]: true,
       },
