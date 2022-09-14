@@ -1,4 +1,4 @@
-import { LoadingOutlined } from '@mist-design/icons'
+import { LoadingOutlined } from '@mist-ui/icons'
 import classNames from 'classnames'
 import { computed, defineComponent } from 'vue'
 import { useInjectConfigGlobal } from '../config-provider'

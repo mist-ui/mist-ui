@@ -47,7 +47,7 @@
     "lib/*/style/*"
   ],
   "dependencies": {
-    "@mist-design/icons": "^0.0.2",
+    "@mist-ui/icons": "^0.0.1",
     "@mistjs/lodash": "^0.0.2",
     "@vueuse/core": "^8.9.4",
     "classnames": "^2.3.2",

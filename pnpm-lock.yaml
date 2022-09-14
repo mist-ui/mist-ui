@@ -62,7 +62,7 @@ importers:
 
   packages/mist-ui:
     specifiers:
-      '@mist-design/icons': ^0.0.2
+      '@mist-ui/icons': ^0.0.1
       '@mistjs/lodash': ^0.0.2
       '@types/node': ^18.7.17
       '@vue/shared': ^3.2.39
@@ -74,7 +74,7 @@ importers:
       vitest: ^0.18.1
       vue: ^3.2.39
     dependencies:
-      '@mist-design/icons': 0.0.2
+      '@mist-ui/icons': link:../icons
       '@mistjs/lodash': 0.0.2
       '@vueuse/core': 8.9.4_vue@3.2.39
       classnames: 2.3.2
@@ -911,12 +911,6 @@ packages:
       - supports-color
       - terser
     dev: true
-
-  /@mist-design/icons/0.0.2:
-    resolution: {integrity: sha512-sD3dGJChI7a2mczhYhBssz0719vqxWLIOG/l2yJxMVT0e4Jdh8gJd4EhfAZoiHEwzWhKVIROAWiOjfxtKhpp3Q==}
-    dependencies:
-      vue: 3.2.39
-    dev: false
 
   /@mist-design/plugin-docs/0.0.6:
     resolution: {integrity: sha512-G5Ztrk+xMgam32jhVw5RC/1nls6RjJzWy70ToTJS/XCZGu22zPncg2ZBttsyt/60D1gCXEwOZE85rOAUQzMuOg==}
