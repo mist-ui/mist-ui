@@ -1,0 +1,76 @@
+@import "custom-block";
+@import "vp-doc";
+
+div[class*="language-"] {
+  background: var(--site-code-block-bg);
+  border-radius: 0.3rem;
+}
+
+.demo-box {
+  box-sizing: border-box;
+  background-color: var(--site-bg-color);
+  border: 1px solid var(--site-border-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+
+  .title {
+    padding: 0.5rem 1rem;
+    color: var(--site-text-color);
+    font-size: 1.2rem;
+    border-bottom: 1px dashed var(--site-border-color);
+    transition: all 0.3s ease;
+  }
+
+  .description {
+    padding: 1rem;
+    font-size: 0.9rem;
+
+    p {
+      margin: 0;
+      color: inherit;
+    }
+  }
+
+  .demo-box-wrapper {
+    padding: 0 1rem 1rem;
+  }
+
+  .demo-box-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-top: 1px dashed var(--site-border-color);
+    border-bottom: 1px solid var(--site-border-color);
+    transition: all 0.3s ease;
+  }
+
+  .demo-box-action-open {
+    border-bottom: 0;
+    transition: all 0.3s ease;
+  }
+
+  .demo-box-code {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    overflow: auto;
+  }
+}
+
+:not(pre) > code {
+  padding: 0.2rem 0.4rem;
+  color: #476582;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+html.dark {
+  :not(pre) > code {
+    color: #c9def1;
+    background-color: #3a3a3a;
+  }
+}

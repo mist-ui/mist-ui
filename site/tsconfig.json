@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [
+      "vite/client",
+      "unplugin-vue-define-options",
+      "@mist-design/plugin-docs"
+    ],
+    "paths": {
+      "~": ["./src"],
+      "mist-ui": ["../packages/mist-ui/src"]
+    }
+  },
+}

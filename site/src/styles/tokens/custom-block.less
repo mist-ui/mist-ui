@@ -1,0 +1,92 @@
+@import "./var.less";
+
+.custom-block {
+  padding: 16px 16px 8px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.custom-block.info {
+  color: var(--vp-custom-block-info-text);
+  background-color: var(--vp-custom-block-info-bg);
+  border-color: var(--vp-custom-block-info-border);
+}
+
+.custom-block.info code {
+  background-color: var(--vp-custom-block-info-code-bg);
+}
+
+.custom-block.tip {
+  color: var(--vp-custom-block-tip-text);
+  background-color: var(--vp-custom-block-tip-bg);
+  border-color: var(--vp-custom-block-tip-border);
+}
+
+.custom-block.tip code {
+  background-color: var(--vp-custom-block-tip-code-bg);
+}
+
+.custom-block.warning {
+  color: var(--vp-custom-block-warning-text);
+  background-color: var(--vp-custom-block-warning-bg);
+  border-color: var(--vp-custom-block-warning-border);
+}
+
+.custom-block.warning code {
+  background-color: var(--vp-custom-block-warning-code-bg);
+}
+
+.custom-block.danger {
+  color: var(--vp-custom-block-danger-text);
+  background-color: var(--vp-custom-block-danger-bg);
+  border-color: var(--vp-custom-block-danger-border);
+}
+
+.custom-block.danger code {
+  background-color: var(--vp-custom-block-danger-code-bg);
+}
+
+.custom-block.details {
+  color: var(--vp-custom-block-details-text);
+  background-color: var(--vp-custom-block-details-bg);
+  border-color: var(--vp-custom-block-details-border);
+}
+
+.custom-block.details code {
+  background-color: var(--vp-custom-block-details-code-bg);
+}
+
+.custom-block-title {
+  font-weight: 700;
+}
+
+.custom-block p + p {
+  margin: 8px 0;
+}
+
+.custom-block.details summary {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.custom-block.details summary + p {
+  margin: 8px 0;
+}
+
+.custom-block a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: opacity 0.25s;
+}
+
+.custom-block a:hover {
+  opacity: 0.6;
+}
+
+.custom-block code {
+  font-size: var(--vp-custom-block-code-font-size);
+}

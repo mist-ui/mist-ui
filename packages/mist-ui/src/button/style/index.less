@@ -1,0 +1,151 @@
+@import "../../style/theme/index.less";
+@import "./theme";
+
+.@{btn-cls} {
+  .btn();
+  &.@{btn-cls}-link {
+    .btn-base(~"var(--@{prefix-cls}-color-base)",transparent);
+
+    &[disabled] {
+      .btn-base(~"var(--@{prefix-cls}-disabled-color)",transparent);
+    }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    .btn-base(~"var(--@{prefix-cls}-disabled-color)",~"var(--@{prefix-cls}-disabled-bg)");
+  }
+
+  &:focus,
+  &:hover {
+    color: ~"var(--@{prefix-cls}-primary-color-hover)";
+    border-color: ~"var(--@{prefix-cls}-primary-color-hover)";
+    outline: none;
+    &.@{btn-cls}-link {
+      .btn-base(~"var(--@{prefix-cls}-primary-color-hover)",transparent);
+
+      &[disabled] {
+        cursor: not-allowed;
+        .btn-base(~"var(--@{prefix-cls}-disabled-color)",transparent);
+      }
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      .btn-base(~"var(--@{prefix-cls}-disabled-color)",~"var(--@{prefix-cls}-disabled-bg)");
+    }
+  }
+
+  &:active {
+    color: ~"var(--@{prefix-cls}-primary-color-active)";
+    border-color: ~"var(--@{prefix-cls}-primary-color-active)";
+    outline: none;
+    &.@{btn-cls}-link {
+      .btn-base(~"var(--@{prefix-cls}-primary-color-active)",transparent);
+
+      &[disabled] {
+        .btn-base(~"var(--@{prefix-cls}-disabled-color)",transparent);
+      }
+    }
+
+    &[disabled] {
+      .btn-base(~"var(--@{prefix-cls}-disabled-color)",~"var(--@{prefix-cls}-disabled-bg)");
+    }
+  }
+
+  &-primary {
+    .btn-color(
+      ~"var(--@{prefix-cls}-primary-color)",
+      ~"var(--@{prefix-cls}-primary-color-hover)",
+      ~"var(--@{prefix-cls}-primary-color-active)",
+      ~"var(--@{prefix-cls}-primary-disabled-color)"
+    );
+  }
+
+  &-success {
+    .btn-color(
+      ~"var(--@{prefix-cls}-success-color)",
+      ~"var(--@{prefix-cls}-success-color-hover)",
+      ~"var(--@{prefix-cls}-success-color-active)",
+      ~"var(--@{prefix-cls}-success-disabled-color)"
+    );
+  }
+
+  &-warning {
+    .btn-color(
+      ~"var(--@{prefix-cls}-warning-color)",
+      ~"var(--@{prefix-cls}-warning-color-hover)",
+      ~"var(--@{prefix-cls}-warning-color-active)",
+      ~"var(--@{prefix-cls}-warning-disabled-color)"
+    );
+  }
+
+  &-error {
+    .btn-color(
+      ~"var(--@{prefix-cls}-error-color)",
+      ~"var(--@{prefix-cls}-error-color-hover)",
+      ~"var(--@{prefix-cls}-error-color-active)",
+      ~"var(--@{prefix-cls}-error-disabled-color)"
+    );
+  }
+
+  &-large {
+    height: ~"var(--@{btn-cls}-h-large)";
+  }
+
+  &-small {
+    height: ~"var(--@{btn-cls}-h-small)";
+  }
+
+  &-block {
+    display: flex;
+    width: 100%;
+  }
+
+  &-dashed {
+    border-style: dashed;
+  }
+
+  &-round {
+    border-radius: ~"var(--@{btn-cls}-radius-round)";
+  }
+
+  &-circle {
+    padding: 0 10px;
+    border-radius: 50%;
+    &.@{btn-cls}-large {
+      padding: 0 14px;
+    }
+    &.@{btn-cls}-small {
+      padding: 0 6px;
+    }
+  }
+
+  &-loading {
+    &[disabled] {
+      cursor: default !important;
+    }
+  }
+
+  &-loading-icon {
+    margin-right: 10px;
+
+    .mist-icon .mist-icon-svg {
+      animation: loading-circle 1s linear infinite;
+    }
+
+    &-none {
+      margin-right: none;
+    }
+  }
+}
+
+@keyframes loading-circle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

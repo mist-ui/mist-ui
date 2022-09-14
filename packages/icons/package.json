@@ -1,12 +1,33 @@
 {
-  "name": "icons",
-  "version": "1.0.0",
+  "name": "@mist-ui/icons",
+  "version": "0.0.0",
   "description": "",
   "keywords": [],
   "license": "ISC",
-  "author": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "aibayanyu",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "unpkg": "dist/icons.umd.js",
+  "jsdelivr": "dist/icons.umd.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./es/index.js",
+      "types": "./es/index.d.ts"
+    },
+    "./es": "./es/index.js",
+    "./lib": "./lib/index.js"
+  },
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "dependencies": {
+    "vue": "^3.2.39"
   }
 }

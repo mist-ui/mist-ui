@@ -1,0 +1,329 @@
+/**
+ * Headings
+ * -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  font-weight: 600;
+  outline: none;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 48px 0 16px;
+  padding-top: 24px;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  //border-top: 1px solid var(--vp-c-divider-light);
+}
+
+h3 {
+  margin: 32px 0 0;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+}
+
+.header-anchor {
+  float: left;
+  margin-left: -0.87em;
+  padding-right: 0.23em;
+  font-weight: 500;
+  opacity: 0;
+  transition: color 0.25s, opacity 0.25s;
+}
+
+h1:hover .header-anchor,
+h1 .header-anchor:focus,
+h2:hover .header-anchor,
+h2 .header-anchor:focus,
+h3:hover .header-anchor,
+h3 .header-anchor:focus,
+h4:hover .header-anchor,
+h4 .header-anchor:focus,
+h5:hover .header-anchor,
+h5 .header-anchor:focus,
+h6:hover .header-anchor,
+h6 .header-anchor:focus {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+  }
+}
+
+/**
+ * Paragraph and inline elements
+ * -------------------------------------------------------------------------- */
+
+p,
+summary {
+  margin: 16px 0;
+}
+
+p {
+  line-height: 28px;
+}
+
+blockquote {
+  margin: 16px 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--vp-c-divider);
+  transition: border-color 0.5s;
+}
+
+blockquote > p {
+  margin: 0;
+  //color: var(--vp-c-text-2);
+  font-size: 16px;
+  transition: color 0.5s;
+}
+
+a {
+  //color: var(--vp-c-brand);
+  font-weight: 500;
+  transition: color 0.25s;
+  text-decoration-style: dotted;
+}
+
+a:hover {
+  //color: var(--vp-c-brand-dark);
+}
+
+strong {
+  font-weight: 600;
+}
+
+/**
+ * Lists
+ * -------------------------------------------------------------------------- */
+
+ul,
+ol {
+  margin: 16px 0;
+  padding-left: 1.25rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+li > ol,
+li > ul {
+  margin: 8px 0 0;
+}
+
+/**
+ * Table
+ * -------------------------------------------------------------------------- */
+
+table {
+  display: block;
+  margin: 20px 0;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+tr {
+  border-top: 1px solid var(--vp-c-divider);
+  transition: background-color 0.5s;
+}
+
+tr:nth-child(2n) {
+  background-color: var(--vp-c-bg-soft);
+}
+
+th,
+td {
+  padding: 12px 16px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+th {
+  font-weight: 600;
+  font-size: 16px;
+  background-color: var(--vp-c-white-soft);
+}
+
+.dark th {
+  background-color: var(--vp-c-black);
+}
+
+/**
+ * Decorational elements
+ * -------------------------------------------------------------------------- */
+
+hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid var(--vp-c-divider-light);
+}
+
+/**
+ * Custom Block
+ * -------------------------------------------------------------------------- */
+
+.custom-block {
+  margin: 16px 0;
+}
+
+.custom-block p {
+  margin: 8px 0;
+  line-height: 24px;
+}
+
+.custom-block p:first-child {
+  margin: 0;
+}
+
+.custom-block a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: opacity 0.25s;
+}
+
+.custom-block a:hover {
+  opacity: 0.6;
+}
+
+.custom-block code {
+  color: inherit;
+  font-weight: 700;
+  font-size: var(--vp-custom-block-code-font-size);
+}
+
+.custom-block div[class*="language-"] {
+  margin: 8px 0;
+}
+
+.custom-block div[class*="language-"] code {
+  font-weight: 400;
+  background-color: transparent;
+}
+
+/**
+ * Code
+ * -------------------------------------------------------------------------- */
+
+/* inline code */
+:not(pre, h1, h2, h3, h4, h5, h6) > code {
+  font-size: var(--vp-code-font-size);
+}
+
+:not(pre) > code {
+  padding: 3px 6px;
+  color: var(--vp-c-text-code);
+  background-color: var(--vp-c-bg-mute);
+  border-radius: 4px;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+h1 > code,
+h2 > code,
+h3 > code {
+  font-size: 0.9em;
+}
+
+a > code {
+  color: var(--vp-c-brand);
+  transition: color 0.25s;
+}
+
+a:hover > code {
+  color: var(--vp-c-brand-dark);
+}
+
+div[class*="language-"] {
+  position: relative;
+  margin: 16px -24px;
+  overflow-x: auto;
+  background-color: var(--vp-code-block-bg);
+  transition: background-color 0.5s;
+}
+
+@media (min-width: 640px) {
+  div[class*="language-"] {
+    margin: 16px 0;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 639px) {
+  li div[class*="language-"] {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+div[class*="language-"] + div[class*="language-"],
+div[class$="-api"] + div[class*="language-"],
+div[class*="language-"] + div[class$="-api"] > div[class*="language-"] {
+  margin-top: -8px;
+}
+
+[class*="language-"] pre,
+[class*="language-"] code {
+  white-space: pre;
+  text-align: left;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
+  tab-size: 4;
+  hyphens: none;
+}
+
+[class*="language-"] pre {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 16px 0;
+  overflow-x: auto;
+  background: transparent;
+}
+
+[class*="language-"] code {
+  display: block;
+  width: fit-content;
+  min-width: 100%;
+  padding: 0 24px;
+  color: var(--vp-code-block-color);
+  font-size: var(--vp-code-font-size);
+  line-height: var(--vp-code-line-height);
+  transition: color 0.5s;
+}
+
+[class*="language-"] code .highlighted {
+  display: inline-block;
+  width: calc(100% + 2 * 24px);
+  margin: 0 -24px;
+  padding: 0 24px;
+  background-color: var(--vp-code-line-highlight-color);
+  transition: background-color 0.5s;
+}
+
+div[class*="language-"].line-numbers-mode {
+  padding-left: 32px;
+}

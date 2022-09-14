@@ -1,0 +1,38 @@
+{
+  "name": "site",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.45.21",
+    "@vueuse/core": "^9.2.0",
+    "vue": "^3.2.38",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.100",
+    "@mist-design/plugin-docs": "^0.0.6",
+    "@mist-design/plugin-md": "^0.0.4",
+    "@types/node": "^18.7.14",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "@vue/runtime-core": "^3.2.38",
+    "less": "^4.1.3",
+    "typescript": "^4.8.2",
+    "unocss": "^0.45.13",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.4",
+    "unplugin-vue-define-options": "^0.11.2",
+    "vite": "^3.1.0",
+    "vite-plugin-inspect": "^0.6.0"
+  }
+}

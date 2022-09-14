@@ -1,0 +1,42 @@
+:root {
+  --site-bg-color: #fff;
+  --site-text-color: #000;
+  --site-border-color: #ddd;
+  --site-header-shadow: 0 8px 24px -2px rgb(0 0 0 / 5%);
+  --site-primary-1: #e6fffb;
+  --site-code-block-bg: #fafafa;
+}
+
+html {
+  color: var(--site-text-color);
+  background-color: var(--site-bg-color);
+  transition: all 0.3s ease;
+
+  .docs-code-dark {
+    display: none;
+  }
+
+  .docs-code-light {
+    display: block;
+  }
+}
+
+html.dark {
+  --site-bg-color: #141414;
+  --site-text-color: #fff;
+  --site-border-color: #333;
+  --site-header-shadow: 0 2px 8px 0 rgb(0 0 0 / 65%);
+  --site-primary-1: #112123;
+  --site-code-block-bg: #292929;
+
+  color: var(--site-text-color);
+  background-color: var(--site-bg-color);
+
+  .docs-code-light {
+    display: none;
+  }
+
+  .docs-code-dark {
+    display: block;
+  }
+}

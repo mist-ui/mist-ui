@@ -1,0 +1,33 @@
+@import "../color/dark.less";
+
+@html-selector-dark:~ "html.dark";
+
+@{html-selector-dark} {
+  --@{prefix-cls}-primary-color: @primary-color-dark;
+  --@{prefix-cls}-primary-color-hover: @primary-color-hover-dark;
+  --@{prefix-cls}-primary-color-active: @primary-color-active-dark;
+  --@{prefix-cls}-primary-disabled-color: @primary-color-disabled-dark;
+  --@{prefix-cls}-success-color: @success-color-dark;
+  --@{prefix-cls}-success-color-hover: @success-color-hover-dark;
+  --@{prefix-cls}-success-color-active: @success-color-active-dark;
+  --@{prefix-cls}-success-disabled-color: @success-color-disabled-dark;
+  --@{prefix-cls}-warning-color: @warning-color-dark;
+  --@{prefix-cls}-warning-color-hover: @warning-color-hover-dark;
+  --@{prefix-cls}-warning-color-active: @warning-color-active-dark;
+  --@{prefix-cls}-warning-disabled-color: @warning-color-disabled-dark;
+  --@{prefix-cls}-error-color: @error-color-dark;
+  --@{prefix-cls}-error-color-hover: @error-color-hover-dark;
+  --@{prefix-cls}-error-color-active: @error-color-active-dark;
+  --@{prefix-cls}-error-disabled-color: @error-color-disabled-dark;
+
+  // 禁用背景色
+  --@{prefix-cls}-disabled-bg: #555;
+
+  // 圆角颜色配置
+  --@{prefix-cls}-border-base: #434343;
+
+  // 字体颜色配置
+  --@{prefix-cls}-text-color: rgb(255 255 255 / 85%);
+  --@{prefix-cls}-text-color-secondary: rgb(255 255 255 / 45%);
+  --@{prefix-cls}-disabled-color: rgb(255 255 255 / 25%);
+}

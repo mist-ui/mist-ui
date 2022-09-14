@@ -1,2 +1,6 @@
 node_modules
 dist
+packages/mist-ui/es
+packages/mist-ui/lib
+packages/icons/lib
+packages/icons/es
