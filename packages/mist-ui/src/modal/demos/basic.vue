@@ -16,7 +16,7 @@ This is a basic component
 
 <template>
   <m-modal v-model:visible="visible" title="测试">
-    <div style="height: 300px">
+    <div>
       测试
     </div>
   </m-modal>

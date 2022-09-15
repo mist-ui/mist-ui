@@ -29,6 +29,19 @@
     line-height: ~"var(--@{prefix-cls}-modal-title-line)";
     word-wrap: break-word;
   }
+
+  &-body {
+    padding: ~"var(--@{prefix-cls}-modal-body-padding)";
+    font-size: ~"var(--@{prefix-cls}-modal-body-font)";
+    word-wrap: break-word;
+  }
+
+  &-footer {
+    padding: ~"var(--@{prefix-cls}-modal-footer-padding)";
+    text-align: right;
+    border-top: 1px ~"var(--@{prefix-cls}-border-base-gray)" solid;
+    border-radius: ~"var(--@{prefix-cls}-border-radius-base)";
+  }
 }
 
 .@{modal-cls}-container {

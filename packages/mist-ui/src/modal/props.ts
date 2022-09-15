@@ -1,4 +1,10 @@
 import type { CSSProperties, ExtractPropTypes, PropType } from 'vue'
+import type { ButtonProps } from '../button/props'
+
+export interface ButtonOptions{
+  text?: string
+  props?: Omit<ButtonProps, 'onClick'>
+}
 
 export const modalProps = {
   'visible': {
@@ -17,9 +23,9 @@ export const modalProps = {
     type: Function as PropType<() => void>,
     default: undefined,
   },
-  'getContainer': {
-    type: Function as PropType<() => HTMLElement>,
-    default: undefined,
+  'to': {
+    type: [String, Object] as PropType< string|HTMLElement>,
+    default: 'body',
   },
   'width': {
     type: [String, Number] as PropType<string | number>,
@@ -31,6 +37,29 @@ export const modalProps = {
   },
   'overlayClass': {
     type: [String, Object] as PropType<string | Record<string, any>>,
+    default: undefined,
+  },
+  'cancel': {
+    type: Object as PropType<ButtonOptions>,
+    default: undefined,
+  },
+  'confirm': {
+    type: Object as PropType<ButtonOptions>,
+    default: undefined,
+  },
+}
+
+export const containerProps = {
+  title: {
+    type: String as PropType<string>,
+    default: '',
+  },
+  cancel: {
+    type: Object as PropType<ButtonOptions>,
+    default: undefined,
+  },
+  confirm: {
+    type: Object as PropType<ButtonOptions>,
     default: undefined,
   },
 }

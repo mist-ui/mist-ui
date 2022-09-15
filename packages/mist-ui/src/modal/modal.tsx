@@ -32,9 +32,8 @@ export default defineComponent({
     }
 
     return () => {
-      const container = props?.getContainer?.() || 'body'
       return (
-        <Teleport to={container}>
+        <Teleport to={props.to}>
           <Overlay
             mark={props.visible}
             class={props.overlayClass}
