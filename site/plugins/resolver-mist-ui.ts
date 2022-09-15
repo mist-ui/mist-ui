@@ -35,6 +35,7 @@ const watchMistUI = (config: ResolvedConfig, tsMap: Map<string, string>) => {
     cwd: config.root,
   })
   watcher.on('add', (file) => {
+    file = file.replace(/\\/g, '/').replace(/\\\\/g, '/')
     if (!tsMap.has(file)) {
       const name = camelCase(basename(file, '.tsx'))
       const importName = name.charAt(0).toUpperCase() + name.slice(1)
@@ -44,8 +45,9 @@ const watchMistUI = (config: ResolvedConfig, tsMap: Map<string, string>) => {
   })
 
   watcher.on('unlink', (file) => {
+    file = file.replace(/\\/g, '/').replace(/\\\\/g, '/')
     if (tsMap.has(file)) {
-      // 删除
+      tsMap.delete(file)
       generateDts(tsMap)
     }
   })
