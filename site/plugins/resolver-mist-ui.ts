@@ -37,10 +37,13 @@ const watchMistUI = (config: ResolvedConfig, tsMap: Map<string, string>) => {
   watcher.on('add', (file) => {
     file = file.replace(/\\/g, '/').replace(/\\\\/g, '/')
     if (!tsMap.has(file)) {
-      const name = camelCase(basename(file, '.tsx'))
-      const importName = name.charAt(0).toUpperCase() + name.slice(1)
-      tsMap.set(file, importName)
-      generateDts(tsMap)
+      const baseName = basename(file, '.tsx')
+      const name = camelCase(baseName)
+      if (baseName !== 'index' && file.endsWith(`${baseName}/${baseName}.tsx`)) {
+        const importName = name.charAt(0).toUpperCase() + name.slice(1)
+        tsMap.set(file, importName)
+        generateDts(tsMap)
+      }
     }
   })
 

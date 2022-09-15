@@ -1,2 +1,39 @@
 @import "../../style/theme/index.less";
 @import "./theme.less";
+
+.@{modal-cls} {
+  position: relative;
+  top: ~"var(--@{prefix-cls}-modal-top)";
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    outline: 0;
+  }
+
+  &-header {
+    padding: ~"var(--@{prefix-cls}-modal-header-padding)";
+    border-bottom: 1px ~"var(--@{prefix-cls}-border-base-gray)" solid;
+  }
+
+  &-title {
+    margin: 0;
+    font-weight: ~"var(--@{prefix-cls}-modal-title-weight)";
+    font-size: ~"var(--@{prefix-cls}-modal-title)";
+    line-height: ~"var(--@{prefix-cls}-modal-title-line)";
+    word-wrap: break-word;
+  }
+}
+
+.@{modal-cls}-container {
+  position: relative;
+  background-color: ~"var(--@{prefix-cls}-background-color)";
+  border: 0;
+  border-radius: ~"var(--@{prefix-cls}-border-radio-base)";
+}

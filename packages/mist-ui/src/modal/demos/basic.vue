@@ -15,7 +15,14 @@ This is a basic component
 </docs>
 
 <template>
-  <m-modal v-model:visible="visible" />
+  <m-modal v-model:visible="visible" title="测试">
+    <div style="height: 300px">
+      测试
+    </div>
+  </m-modal>
+  <m-button @click="visible = true">
+    Open
+  </m-button>
 </template>
 
 <script lang="ts" setup>

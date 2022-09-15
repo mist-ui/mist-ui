@@ -9,3 +9,7 @@ export const isString = (val: any): val is string => {
 export const isArray = (val: any): val is Array<any> => {
   return Array.isArray(val)
 }
+
+export const isFunction = (val: any): val is Function => {
+  return typeof val === 'function'
+}

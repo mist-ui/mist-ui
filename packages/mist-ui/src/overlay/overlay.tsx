@@ -1,8 +1,8 @@
 import { computed, defineComponent } from 'vue'
 import { classMerge } from '../_utils/tools/class-merge'
 import { useInjectConfigGlobal } from '../config-provider'
+import { styleMerge } from '../_utils/tools/style-merge'
 import { overlayProps } from './props'
-import { styleMerge } from './../_utils/tools/style-merge'
 export default defineComponent({
   name: 'MOverlay',
   inheritAttrs: false,
@@ -13,14 +13,14 @@ export default defineComponent({
     const { getPrefixCls } = useInjectConfigGlobal()
     const overlayPrefix = getPrefixCls('overlay')
     const classs = computed(() => classMerge(
-      overlayPrefix, {
-
-      }, attrs.class))
-
+      overlayPrefix,
+      {
+        [`${overlayPrefix}-show`]: props.mark,
+      },
+      attrs.class,
+    ))
     const styles = computed(() => styleMerge(attrs.style, {}))
     return () => {
-      if (!props.mark)
-        return slots.default?.()
       return (
         <div
           class={classs.value}
