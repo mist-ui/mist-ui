@@ -1,8 +1,8 @@
-import type { CSSProperties } from 'vue'
 import { computed, defineComponent } from 'vue'
 import { classMerge } from '../_utils/tools/class-merge'
 import { useInjectConfigGlobal } from '../config-provider'
 import { overlayProps } from './props'
+import { styleMerge } from './../_utils/tools/style-merge'
 export default defineComponent({
   name: 'MOverlay',
   inheritAttrs: false,
@@ -16,13 +16,15 @@ export default defineComponent({
       overlayPrefix, {
 
       }, attrs.class))
+
+    const styles = computed(() => styleMerge(attrs.style, {}))
     return () => {
       if (!props.mark)
         return slots.default?.()
       return (
         <div
           class={classs.value}
-          style={attrs.style as CSSProperties}
+          style={styles.value}
         >
           { slots.default?.() }
         </div>
