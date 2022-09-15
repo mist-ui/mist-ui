@@ -65,7 +65,7 @@ importers:
   packages/mist-ui:
     specifiers:
       '@mist-ui/icons': ^0.0.1
-      '@mistjs/lodash': ^0.0.2
+      '@mistjs/lodash': ^0.0.3
       '@types/node': ^18.7.17
       '@vue/shared': ^3.2.39
       '@vueuse/core': ^8.9.4
@@ -76,7 +76,7 @@ importers:
       vue: ^3.2.39
     dependencies:
       '@mist-ui/icons': 0.0.1
-      '@mistjs/lodash': 0.0.2
+      '@mistjs/lodash': 0.0.3
       '@vueuse/core': 8.9.4_vue@3.2.39
       vue: 3.2.39
     devDependencies:
@@ -1034,6 +1034,15 @@ packages:
       '@types/lodash-es': 4.17.6
       lodash: 4.17.21
       lodash-es: 4.17.21
+    dev: true
+
+  /@mistjs/lodash/0.0.3:
+    resolution: {integrity: sha512-fkK9KsS1lC8NACPb89SJbi1EXdZ3ZC726rKuQbNpflHbO6AdcmMN39g5EdCBbyA+BalQnnXZWTvyW4KClsvtZQ==}
+    dependencies:
+      '@types/lodash-es': 4.17.6
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+    dev: false
 
   /@mistjs/tsconfig-vue/0.0.3:
     resolution: {integrity: sha512-7VzQ2vIjhaUgqXJFY9/ujKOfkbJ1reJUd4ZkyDQfbszI/eD4muyioUfduslBD5MMc2P3ABz5Uu0YBtwbSyti2w==}
