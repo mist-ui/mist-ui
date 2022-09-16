@@ -44,16 +44,6 @@ export default defineComponent({
       if (bool !== false)
         props?.['onUpdate:visible']?.(false)
     }
-    const onEnter = (_el: Element, _done: () => void) => {
-      // done()
-    }
-
-    const onLeave = (_el: Element, _done: () => void) => {
-      setTimeout(() => {
-        closed.value = false
-      }, 300)
-      // done()
-    }
 
     const onAfterLeave = (_el: Element) => {
       closed.value = false
@@ -78,7 +68,6 @@ export default defineComponent({
         else {
           return (
             <Container
-              v-show={props.visible}
               onCancel={onCancel}
               onConfirm={onConfirm}
               v-slots={slots}
@@ -90,29 +79,28 @@ export default defineComponent({
       return (
         <Teleport to={props.to}>
           <Overlay
-            mark={props.visible}
+            mark={closed.value}
             class={props.overlayClass}
             style={props.overlayStyle}
-            v-show={closed.value}
           >
             <div
               class={overlayCls.value}
+              v-show={closed.value}
               onClick={withModifiers(onMaskClick, ['stop'])}
             >
-              <div
-                class={classs.value}
-                style={styles.value}
-                onClick={withModifiers(() => {}, ['stop'])}
+              <Transition
+                name={'modal-fade-in'}
+                onAfterLeave={onAfterLeave}
               >
-                <Transition
-                  name={'modal-fade-in'}
-                  onEnter={onEnter}
-                  onLeave={onLeave}
-                  onAfterLeave={onAfterLeave}
+                <div
+                  class={classs.value}
+                  v-show={props.visible}
+                  style={styles.value}
+                  onClick={withModifiers(() => {}, ['stop'])}
                 >
                   {renderContainer()}
-                </Transition>
-              </div>
+                </div>
+              </Transition>
             </div>
           </Overlay>
         </Teleport>
