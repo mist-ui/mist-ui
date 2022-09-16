@@ -8,7 +8,8 @@
     "rules": {
         "at-rule-no-unknown": null,
         "no-duplicate-selectors": null,
-        "no-descending-specificity": null
+        "no-descending-specificity": null,
+        "max-line-length": null
     },
     "ignoreFiles": [
         "node_modules/**",

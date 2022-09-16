@@ -1,5 +1,6 @@
 import type { VNodeChild } from 'vue'
 import { computed, defineComponent } from 'vue'
+import { omit } from '@mistjs/lodash'
 import { useMergeSlotsProps } from '../_utils/hooks/merge-slots-props'
 import { classMerge } from '../_utils/tools/class-merge'
 import { useInjectConfigGlobal } from '../config-provider'
@@ -49,12 +50,23 @@ export const Container = defineComponent({
           const dom: VNodeChild = []
           if (props.cancel !== null) {
             dom.push(
-              <Button {...props.cancel?.props}>{ props.cancel?.text ?? getLocale('modal.cancel') }</Button>,
+              <Button
+                {...omit(props.cancel?.props, ['onClick'])}
+                onClick={props.onCancel}
+              >
+                { props.cancel?.text ?? getLocale('modal.cancel') }
+              </Button>,
             )
           }
           if (props.confirm !== null) {
             dom.push(
-              <Button type={'primary'} {...props.confirm?.props}>{ props.confirm?.text ?? getLocale('modal.confirm') }</Button>,
+              <Button
+                type={'primary'}
+                {...omit(props.confirm?.props, ['onClick'])}
+                onClick={props.onConfirm}
+              >
+                { props.confirm?.text ?? getLocale('modal.confirm') }
+              </Button>,
             )
           }
           let node: VNodeChild = dom

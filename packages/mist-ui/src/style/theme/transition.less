@@ -1,0 +1,21 @@
+.modal-fade-in {
+  &-enter-active {
+    transition: opacity 0.3s ~"var(--@{prefix-cls}-cubic-bezier-ease-out)", transform 0.3s ~"var(--@{prefix-cls}-cubic-bezier-ease-out)";
+  }
+
+  &-leave-active {
+    transition: opacity 0.3s ~"var(--@{prefix-cls}-cubic-bezier-ease-in)", transform 0.3s ~"var(--@{prefix-cls}-cubic-bezier-ease-in)";
+  }
+
+  &-enter-from,
+  &-leave-to {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  &-leave-from,
+  &-enter-to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

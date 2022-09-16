@@ -47,6 +47,18 @@ export const modalProps = {
     type: Object as PropType<ButtonOptions>,
     default: undefined,
   },
+  'onCancel': {
+    type: Function as PropType<() => void | boolean>,
+    default: undefined,
+  },
+  'onConfirm': {
+    type: Function as PropType<() => void | boolean>,
+    default: undefined,
+  },
+  'destroyOnClose': {
+    type: Boolean as PropType<boolean>,
+    default: false,
+  },
 }
 
 export const containerProps = {
@@ -60,6 +72,14 @@ export const containerProps = {
   },
   confirm: {
     type: Object as PropType<ButtonOptions>,
+    default: undefined,
+  },
+  onCancel: {
+    type: Function as PropType<() => void>,
+    default: undefined,
+  },
+  onConfirm: {
+    type: Function as PropType<() => void>,
     default: undefined,
   },
 }
