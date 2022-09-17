@@ -30,9 +30,11 @@
     "build:icons": "mist-cli build icons",
     "lint": "run-p lint:*",
     "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix",
-    "lint:style": "stylelint '{site,packages/ui}/**/*.less' --fix"
+    "lint:style": "stylelint '{site,packages/ui}/**/*.less' --fix",
+    "style:gen": "esno ./scripts/generate-less.ts"
   },
   "devDependencies": {
+    "@ant-design/colors": "^6.0.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@mist-design/cli": "^0.0.2",

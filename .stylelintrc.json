@@ -9,7 +9,13 @@
         "at-rule-no-unknown": null,
         "no-duplicate-selectors": null,
         "no-descending-specificity": null,
-        "max-line-length": null
+        "max-line-length": null,
+        "function-no-unknown": [
+            true,
+            {
+                "ignoreFunctions": ["fade"]
+            }
+        ]
     },
     "ignoreFiles": [
         "node_modules/**",

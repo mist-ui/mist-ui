@@ -3,35 +3,82 @@
 @html-selector-dark:~ "html.dark";
 
 @{html-selector-dark} {
-  --@{prefix-cls}-primary-color: @primary-color-dark;
-  --@{prefix-cls}-primary-color-hover: @primary-color-hover-dark;
-  --@{prefix-cls}-primary-color-active: @primary-color-active-dark;
-  --@{prefix-cls}-primary-disabled-color: @primary-color-disabled-dark;
-  --@{prefix-cls}-success-color: @success-color-dark;
-  --@{prefix-cls}-success-color-hover: @success-color-hover-dark;
-  --@{prefix-cls}-success-color-active: @success-color-active-dark;
-  --@{prefix-cls}-success-disabled-color: @success-color-disabled-dark;
-  --@{prefix-cls}-warning-color: @warning-color-dark;
-  --@{prefix-cls}-warning-color-hover: @warning-color-hover-dark;
-  --@{prefix-cls}-warning-color-active: @warning-color-active-dark;
-  --@{prefix-cls}-warning-disabled-color: @warning-color-disabled-dark;
-  --@{prefix-cls}-error-color: @error-color-dark;
-  --@{prefix-cls}-error-color-hover: @error-color-hover-dark;
-  --@{prefix-cls}-error-color-active: @error-color-active-dark;
-  --@{prefix-cls}-error-disabled-color: @error-color-disabled-dark;
+  --@{prefix-cls}-primary-dark-base: @primary-dark-base;
+  --@{prefix-cls}-primary-dark-1: @primary-dark-1;
+  --@{prefix-cls}-primary-dark-2: @primary-dark-2;
+  --@{prefix-cls}-primary-dark-3: @primary-dark-3;
+  --@{prefix-cls}-primary-dark-4: @primary-dark-4;
+  --@{prefix-cls}-primary-dark-5: @primary-dark-5;
+  --@{prefix-cls}-primary-dark-6: @primary-dark-6;
+  --@{prefix-cls}-primary-dark-7: @primary-dark-7;
+  --@{prefix-cls}-primary-dark-8: @primary-dark-8;
+  --@{prefix-cls}-primary-dark-9: @primary-dark-9;
+  --@{prefix-cls}-primary-dark-10: @primary-dark-10;
+  --@{prefix-cls}-success-dark-base: @success-dark-base;
+  --@{prefix-cls}-success-dark-1: @success-dark-1;
+  --@{prefix-cls}-success-dark-2: @success-dark-2;
+  --@{prefix-cls}-success-dark-3: @success-dark-3;
+  --@{prefix-cls}-success-dark-4: @success-dark-4;
+  --@{prefix-cls}-success-dark-5: @success-dark-5;
+  --@{prefix-cls}-success-dark-6: @success-dark-6;
+  --@{prefix-cls}-success-dark-7: @success-dark-7;
+  --@{prefix-cls}-success-dark-8: @success-dark-8;
+  --@{prefix-cls}-success-dark-9: @success-dark-9;
+  --@{prefix-cls}-success-dark-10: @success-dark-10;
+  --@{prefix-cls}-warning-dark-base: @warning-dark-base;
+  --@{prefix-cls}-warning-dark-1: @warning-dark-1;
+  --@{prefix-cls}-warning-dark-2: @warning-dark-2;
+  --@{prefix-cls}-warning-dark-3: @warning-dark-3;
+  --@{prefix-cls}-warning-dark-4: @warning-dark-4;
+  --@{prefix-cls}-warning-dark-5: @warning-dark-5;
+  --@{prefix-cls}-warning-dark-6: @warning-dark-6;
+  --@{prefix-cls}-warning-dark-7: @warning-dark-7;
+  --@{prefix-cls}-warning-dark-8: @warning-dark-8;
+  --@{prefix-cls}-warning-dark-9: @warning-dark-9;
+  --@{prefix-cls}-warning-dark-10: @warning-dark-10;
+  --@{prefix-cls}-error-dark-base: @error-dark-base;
+  --@{prefix-cls}-error-dark-1: @error-dark-1;
+  --@{prefix-cls}-error-dark-2: @error-dark-2;
+  --@{prefix-cls}-error-dark-3: @error-dark-3;
+  --@{prefix-cls}-error-dark-4: @error-dark-4;
+  --@{prefix-cls}-error-dark-5: @error-dark-5;
+  --@{prefix-cls}-error-dark-6: @error-dark-6;
+  --@{prefix-cls}-error-dark-7: @error-dark-7;
+  --@{prefix-cls}-error-dark-8: @error-dark-8;
+  --@{prefix-cls}-error-dark-9: @error-dark-9;
+  --@{prefix-cls}-error-dark-10: @error-dark-10;
+  --@{prefix-cls}-primary-color: ~"var(--@{prefix-cls}-primary-dark-base)";
+  --@{prefix-cls}-primary-color-hover: ~"var(--@{prefix-cls}-primary-dark-7)";
+  --@{prefix-cls}-primary-color-active: ~"var(--@{prefix-cls}-primary-dark-5)";
+  --@{prefix-cls}-primary-disabled-color: ~"var(--@{prefix-cls}-primary-dark-3)";
+  --@{prefix-cls}-success-color: ~"var(--@{prefix-cls}-success-dark-base)";
+  --@{prefix-cls}-success-color-hover: ~"var(--@{prefix-cls}-success-dark-7)";
+  --@{prefix-cls}-success-color-active: ~"var(--@{prefix-cls}-success-dark-5)";
+  --@{prefix-cls}-success-disabled-color: ~"var(--@{prefix-cls}-success-dark-3)";
+  --@{prefix-cls}-warning-color: ~"var(--@{prefix-cls}-warning-dark-base)";
+  --@{prefix-cls}-warning-color-hover: ~"var(--@{prefix-cls}-warning-dark-7)";
+  --@{prefix-cls}-warning-color-active: ~"var(--@{prefix-cls}-warning-dark-5)";
+  --@{prefix-cls}-warning-disabled-color: ~"var(--@{prefix-cls}-warning-dark-3)";
+  --@{prefix-cls}-error-color: ~"var(--@{prefix-cls}-error-dark-base)";
+  --@{prefix-cls}-error-color-hover: ~"var(--@{prefix-cls}-error-dark-7)";
+  --@{prefix-cls}-error-color-active: ~"var(--@{prefix-cls}-error-dark-5)";
+  --@{prefix-cls}-error-disabled-color: ~"var(--@{prefix-cls}-error-dark-3)";
 
   // 背景色
-  --@{prefix-cls}-background-color: @background-color-dark;
+  --@{prefix-cls}-background-color: fade(@white, 8%);
 
   // 禁用背景色
-  --@{prefix-cls}-disabled-bg: #555;
+  --@{prefix-cls}-disabled-bg: fade(@white, 30%);
 
   // 圆角颜色配置
-  --@{prefix-cls}-border-base: #434343;
-  --@{prefix-cls}-border-base-gray: @gray-10;
+  --@{prefix-cls}-border-base: fade(@white, 20%);
+  --@{prefix-cls}-border-base-gray: fade(@white, 20%);
 
   // 字体颜色配置
-  --@{prefix-cls}-text-color: rgb(255 255 255 / 85%);
-  --@{prefix-cls}-text-color-secondary: rgb(255 255 255 / 45%);
-  --@{prefix-cls}-disabled-color: rgb(255 255 255 / 25%);
+  --@{prefix-cls}-text-color: fade(@white, 85%);
+  --@{prefix-cls}-text-color-secondary: fade(@white, 45%);
+  --@{prefix-cls}-disabled-color: fade(@white, 30%);
+
+  // 分割线颜色配置
+  --@{prefix-cls}-divider-color: fade(@white, 12%);
 }

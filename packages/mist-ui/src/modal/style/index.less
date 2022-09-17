@@ -17,4 +17,19 @@
     left: 0;
     background-color: ~"var(--@{prefix-cls}-modal-mask)";
   }
+
+  &-container {
+    position: relative;
+    top: ~"var(--@{prefix-cls}-modal-top)";
+    margin: 0 auto;
+    background: ~"var(--@{prefix-cls}-background-color)";
+    border-radius: ~"var(--@{prefix-cls}-border-radio-base)";
+    box-shadow: ~"var(--@{prefix-cls}-shadow-3)";
+  }
+
+  &-screenfull {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

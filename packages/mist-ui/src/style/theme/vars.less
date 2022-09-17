@@ -1,31 +1,78 @@
+@import "../color/index.less";
+
 @prefix-cls:~ "mist";
 
 @html-selector:~ "html";
 
 @{html-selector} {
+  --@{prefix-cls}-primary-base: @primary-base;
+  --@{prefix-cls}-primary-1: @primary-1;
+  --@{prefix-cls}-primary-2: @primary-2;
+  --@{prefix-cls}-primary-3: @primary-3;
+  --@{prefix-cls}-primary-4: @primary-4;
+  --@{prefix-cls}-primary-5: @primary-5;
+  --@{prefix-cls}-primary-6: @primary-6;
+  --@{prefix-cls}-primary-7: @primary-7;
+  --@{prefix-cls}-primary-8: @primary-8;
+  --@{prefix-cls}-primary-9: @primary-9;
+  --@{prefix-cls}-primary-10: @primary-10;
+  --@{prefix-cls}-success-base: @success-base;
+  --@{prefix-cls}-success-1: @success-1;
+  --@{prefix-cls}-success-2: @success-2;
+  --@{prefix-cls}-success-3: @success-3;
+  --@{prefix-cls}-success-4: @success-4;
+  --@{prefix-cls}-success-5: @success-5;
+  --@{prefix-cls}-success-6: @success-6;
+  --@{prefix-cls}-success-7: @success-7;
+  --@{prefix-cls}-success-8: @success-8;
+  --@{prefix-cls}-success-9: @success-9;
+  --@{prefix-cls}-success-10: @success-10;
+  --@{prefix-cls}-warning-base: @warning-base;
+  --@{prefix-cls}-warning-1: @warning-1;
+  --@{prefix-cls}-warning-2: @warning-2;
+  --@{prefix-cls}-warning-3: @warning-3;
+  --@{prefix-cls}-warning-4: @warning-4;
+  --@{prefix-cls}-warning-5: @warning-5;
+  --@{prefix-cls}-warning-6: @warning-6;
+  --@{prefix-cls}-warning-7: @warning-7;
+  --@{prefix-cls}-warning-8: @warning-8;
+  --@{prefix-cls}-warning-9: @warning-9;
+  --@{prefix-cls}-warning-10: @warning-10;
+  --@{prefix-cls}-error-base: @error-base;
+  --@{prefix-cls}-error-1: @error-1;
+  --@{prefix-cls}-error-2: @error-2;
+  --@{prefix-cls}-error-3: @error-3;
+  --@{prefix-cls}-error-4: @error-4;
+  --@{prefix-cls}-error-5: @error-5;
+  --@{prefix-cls}-error-6: @error-6;
+  --@{prefix-cls}-error-7: @error-7;
+  --@{prefix-cls}-error-8: @error-8;
+  --@{prefix-cls}-error-9: @error-9;
+  --@{prefix-cls}-error-10: @error-10;
+
   // 主色
-  --@{prefix-cls}-primary-color: @primary-color;
-  --@{prefix-cls}-primary-color-hover: @primary-color-hover;
-  --@{prefix-cls}-primary-color-active: @primary-color-active;
-  --@{prefix-cls}-primary-disabled-color: @primary-color-disabled;
+  --@{prefix-cls}-primary-color: ~"var(--@{prefix-cls}-primary-base)";
+  --@{prefix-cls}-primary-color-hover: ~"var(--@{prefix-cls}-primary-5)";
+  --@{prefix-cls}-primary-color-active: ~"var(--@{prefix-cls}-primary-7)";
+  --@{prefix-cls}-primary-disabled-color: ~"var(--@{prefix-cls}-primary-3)";
 
   // 成功色
-  --@{prefix-cls}-success-color: @success-color;
-  --@{prefix-cls}-success-color-hover: @success-color-hover;
-  --@{prefix-cls}-success-color-active: @success-color-active;
-  --@{prefix-cls}-success-disabled-color: @success-color-disabled;
+  --@{prefix-cls}-success-color: ~"var(--@{prefix-cls}-success-base)";
+  --@{prefix-cls}-success-color-hover: ~"var(--@{prefix-cls}-success-5)";
+  --@{prefix-cls}-success-color-active: ~"var(--@{prefix-cls}-success-7)";
+  --@{prefix-cls}-success-disabled-color: ~"var(--@{prefix-cls}-success-3)";
 
   // 警告色
-  --@{prefix-cls}-warning-color: @warning-color;
-  --@{prefix-cls}-warning-color-hover: @warning-color-hover;
-  --@{prefix-cls}-warning-color-active: @warning-color-active;
-  --@{prefix-cls}-warning-disabled-color: @warning-color-disabled;
+  --@{prefix-cls}-warning-color: ~"var(--@{prefix-cls}-warning-base)";
+  --@{prefix-cls}-warning-color-hover: ~"var(--@{prefix-cls}-warning-5)";
+  --@{prefix-cls}-warning-color-active: ~"var(--@{prefix-cls}-warning-7)";
+  --@{prefix-cls}-warning-disabled-color: ~"var(--@{prefix-cls}-warning-3)";
 
   // 错误色
-  --@{prefix-cls}-error-color: @error-color;
-  --@{prefix-cls}-error-color-hover: @error-color-hover;
-  --@{prefix-cls}-error-color-active: @error-color-active;
-  --@{prefix-cls}-error-disabled-color: @error-color-disabled;
+  --@{prefix-cls}-error-color: ~"var(--@{prefix-cls}-error-base)";
+  --@{prefix-cls}-error-color-hover: ~"var(--@{prefix-cls}-error-5)";
+  --@{prefix-cls}-error-color-active: ~"var(--@{prefix-cls}-error-7)";
+  --@{prefix-cls}-error-disabled-color: ~"var(--@{prefix-cls}-error-3)";
 
   // 灰色
   --@{prefix-cls}-gray-1: @gray-1;
@@ -40,31 +87,35 @@
   --@{prefix-cls}-gray-10: @gray-10;
   --@{prefix-cls}-gray-11: @gray-11;
   --@{prefix-cls}-gray-12: @gray-12;
+  --@{prefix-cls}-gray-13: @gray-13;
 
   // 背景色
-  --@{prefix-cls}-background-color: @background-color;
+  --@{prefix-cls}-background-color: fade(@black, 4%);
 
   // 禁用背景色
-  --@{prefix-cls}-disabled-bg: #f5f5f5;
+  --@{prefix-cls}-disabled-bg: fade(@black, 25%);
 
   // 圆角配置
   --@{prefix-cls}-border-radio-base: 2px;
-  --@{prefix-cls}-border-base: #d9d9d9;
+  --@{prefix-cls}-border-base: fade(@black, 15%);
   --@{prefix-cls}-border-base-gray: @gray-4;
 
   // 字体配置
   --@{prefix-cls}-font-size-base: 14px;
   --@{prefix-cls}-font-size-lg: 18px;
   --@{prefix-cls}-font-size-sm: 12px;
-  --@{prefix-cls}-text-color: rgb(0 0 0 / 85%);
-  --@{prefix-cls}-text-color-secondary: rgb(0 0 0 / 45%);
-  --@{prefix-cls}-disabled-color: rgb(0 0 0 / 25%);
+  --@{prefix-cls}-text-color: fade(@black, 85%);
+  --@{prefix-cls}-text-color-secondary: fade(@black, 45%);
+  --@{prefix-cls}-disabled-color: fade(@black, 25%);
+
+  // 分割线颜色配置
+  --@{prefix-cls}-divider-color: fade(@white, 6%);
 
   // 过度效果
   --@{prefix-cls}-cubic-bezier-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --@{prefix-cls}-cubic-bezier-ease-out: cubic-bezier(0, 0, 0.2, 1);
   --@{prefix-cls}-cubic-bezier-ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --@{prefix-cls}-transition-duration: 300ms;
+  --@{prefix-cls}-transition-duration: 0.3s;
 
   // 阴影
   --@{prefix-cls}-shadow-1: 0 1px 2px -2px rgb(0 0 0 / 24%), 0 3px 6px 0 rgb(0 0 0 / 18%), 0 5px 12px 4px rgb(0 0 0 / 12%);

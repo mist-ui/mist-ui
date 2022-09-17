@@ -17,6 +17,10 @@ export const modalProps = {
     type: [String, Object] as PropType<string | HTMLElement>,
     default: 'body',
   },
+  width: {
+    type: [String, Number] as PropType<string|number>,
+    default: 520,
+  },
 }
 
 export type ModalProps = ExtractPropTypes<typeof modalProps>

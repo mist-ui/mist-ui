@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@ant-design/colors': ^6.0.0
       '@commitlint/cli': ^17.0.3
       '@commitlint/config-conventional': ^17.0.3
       '@mist-design/cli': ^0.0.2
@@ -30,6 +31,7 @@ importers:
       unplugin-vue-define-options: ^0.11.2
       vitest: ^0.23.2
     devDependencies:
+      '@ant-design/colors': 6.0.0
       '@commitlint/cli': 17.0.3
       '@commitlint/config-conventional': 17.0.3
       '@mist-design/cli': 0.0.2
@@ -146,6 +148,12 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.15
+    dev: true
+
+  /@ant-design/colors/6.0.0:
+    resolution: {integrity: sha512-qAZRvPzfdWHtfameEGP2Qvuf838NhergR35o+EuVyB5XvSA98xod5r4utvi4TJ3ywmevm290g9nsCG5MryrdWQ==}
+    dependencies:
+      '@ctrl/tinycolor': 3.4.1
     dev: true
 
   /@antfu/install-pkg/0.1.0:
@@ -641,6 +649,11 @@ packages:
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
+    dev: true
+
+  /@ctrl/tinycolor/3.4.1:
+    resolution: {integrity: sha512-ej5oVy6lykXsvieQtqZxCOaLT+xD4+QNarq78cIYISHmZXshCvROLudpQN3lfL8G0NL7plMSSK+zlyvCaIJ4Iw==}
+    engines: {node: '>=10'}
     dev: true
 
   /@esbuild-kit/cjs-loader/2.3.3:
