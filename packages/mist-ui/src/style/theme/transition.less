@@ -23,3 +23,23 @@
     opacity: 1;
   }
 }
+
+.fade-in {
+  &-enter-active {
+    transition: opacity ~"var(--@{prefix-cls}-transition-duration)" ease-in;
+  }
+
+  &-leave-active {
+    transition: opacity ~"var(--@{prefix-cls}-transition-duration)" ease-out;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-leave-from,
+  &-enter-to {
+    opacity: 1;
+  }
+}

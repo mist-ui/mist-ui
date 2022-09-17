@@ -15,17 +15,16 @@ This is a basic component
 </docs>
 
 <template>
-  <m-modal v-model:visible="visible" title="测试">
-    <div>
-      测试
-    </div>
-  </m-modal>
-  <m-button @click="visible = true">
+  <m-button type="primary" @click="visiable = true">
     Open
   </m-button>
+  <m-modal v-model:visible="visiable">
+    测试
+  </m-modal>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-const visible = ref(false)
+import { shallowRef } from 'vue'
+
+const visiable = shallowRef(false)
 </script>
